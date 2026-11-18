@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Oswald", "Manrope", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-obsidian: #0B0B10;
+  --color-surface: #12121A;
+  --color-surface-hover: #171722;
+  --color-accent: #8B5CF6;
+  --color-accent-bright: #A855F7;
+}
+
+@layer base {
+  html {
+    background-color: #0B0B10;
+    color: #F4F4F5;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0B0B10;
+    letter-spacing: 0.01em;
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 2px solid #A855F7;
+    outline-offset: 3px;
+  }
+}
+
+.athletic-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
